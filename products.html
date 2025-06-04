@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Products | NareShoes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+    <h1><span class="highlight">Nare</span>Shoes</h1>
+  </div>
+  <nav class="navbar">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+	  <li><a href="checkout.html">Checkout</a></li>
+	  <li><a href="index.html">Index</a></li>
+	  <div id="cart-count">Cart: 0</div>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+  </header>
+
+  <main>
+    <h2>Our Shoe Collection</h2>
+	<div class="products-container">
+    <section class="product-grid">
+      <div class="product">
+        <img src="images/airspeedrunners.jpeg" alt="Running Shoe">
+        <h3>AirSpeed Runners</h3>
+        <p>P1,250 – Lightweight performance shoes</p>
+		<button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/ClassicShoes.jpeg" alt="Formal Shoe">
+        <h3>Classic Leather</h3>
+        <p>P950 – Elegant and durable</p>
+		<button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/airjordans.jpeg" alt="Fashion Shoe">
+        <h3>Streetwear sneakers</h3>
+        <p>P1,650 – Fine material comfort sneakers</p>
+		<button onclick="addToCart(3)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/loafers.jpeg" alt="Casual shoes">
+        <h3>Loafers </h3>
+        <p>P1,050 – Smart casual shoes</p>
+		<button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/mountaineers.jpeg" alt="Hiking Shoes">
+        <h3>Merrill Hiking Shoes</h3>
+        <p>P2,250 – Lightweight hiking shoes</p>
+		<button onclick="addToCart(4)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/block.jpeg" alt="Office shoes">
+        <h3>Block heels </h3>
+        <p>P750 – Smart spring heels</p>
+		<button onclick="addToCart(6)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/pumps.jpeg" alt="Casual shoes">
+        <h3>Pumps </h3>
+        <p>P250 – Cute pink pumps</p>
+		<button onclick="addToCart(7)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/whiteheels.jpeg" alt="Formal shoes">
+        <h3>High heels </h3>
+        <p>P1,220 – Classy dinner heels</p>
+		<button onclick="addToCart(8)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/formalgala.jpeg" alt="Formal shoes">
+        <h3>High heels</h3>
+        <p>P1,700 – Formal gala heels</p>
+		<button onclick="addToCart(9)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/womenclassicshoes.jpeg" alt="Formal shoes">
+        <h3>Office heels </h3>
+        <p>P1,250 – Smart formal heels</p>
+		<button onclick="addToCart(10)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/nike.jpeg" alt="Casual shoes">
+        <h3>Nike sneakers </h3>
+        <p>P1,200 – Smart casual sneakers</p>
+		<button onclick="addToCart(11)">Add to Cart</button>
+      </div>
+	  <div class="product">
+        <img src="images/nike1.jpeg" alt="Casual shoes">
+        <h3>Nike sneakers </h3>
+        <p>P1,350 – Light running shoes</p>
+		<button onclick="addToCart(12)">Add to Cart</button>
+      </div>
+	  </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NareShoes. All rights reserved.</p>
+  </footer>
+  <div class="slideshow-bg">
+  <img src="images/background1.jpeg" class="slide active">
+  <img src="images/background2.jpeg" class="slide">
+</div>
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+</script>
+<script src="cart.js"></script>
+</body>
+</html>

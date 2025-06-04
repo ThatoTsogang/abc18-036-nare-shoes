@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NareShoes | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1><span class="highlight">Nare</span>Shoes</h1>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+		<li><a href="index.html">Index</a></li>
+        <div id="cart-count">Cart: 0</div>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Step Into Comfort and Style</h2>
+      <p>Explore our latest collection of stylish and comfortable shoes for every occasion.</p>
+
+      <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="featured-grid">
+          <div class="featured-item">
+            <img src="images/airjordans.jpeg" alt="Air Jordans" />
+            <h3>Air Jordans</h3>
+            <p>P1,650 – Limited Edition</p>
+          </div>
+          <div class="featured-item">
+            <img src="images/mountaineers.jpeg" alt="Merrill hiking shoes" />
+            <h3>Merrill hiking shoes</h3>
+            <p>P2,250 – Limited Edition</p>
+          </div>
+        </div>
+      </section>
+
+      <a href="products.html" class="shop-btn">Shop Now</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NareShoes. All rights reserved.</p>
+  </footer>
+
+  <div class="slideshow-bg">
+    <img src="images/background1.jpeg" class="slide active" />
+    <img src="images/background2.jpeg" class="slide" />
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000);
+
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+  <script src="cart.js"></script>
+</body>
+</html>

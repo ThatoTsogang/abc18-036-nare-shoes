@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NareShoes | Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1><span class="brand-highlight">Nare</span>Shoes</h1>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="checkout.html" class="active">Checkout</a>
+	   <li><a href="index.html">Index</a></li>
+    </nav>
+  </header>
+
+  <main class="checkout-container">
+    <h2>Checkout</h2>
+
+    <section class="order-summary">
+      <h3>Order Summary</h3>
+      <ul id="cart-items">
+        <!-- Dynamically filled with JS -->
+      </ul>
+      <p><strong>Total:</strong> <span id="cart-total">P0.00</span></p>
+    </section>
+
+    <section class="checkout-form">
+      <h3>Shipping & Payment</h3>
+      <form id="checkout-form">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" required>
+
+        <label for="address">Shipping Address:</label>
+        <textarea id="address" required></textarea>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" required>
+          <option value="">Select</option>
+          <option value="credit">Credit/Debit Card</option>
+          <option value="mobile">Mobile Money</option>
+        </select>
+
+        <button type="submit" class="checkout-btn">Place Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NareShoes. All rights reserved.</p>
+  </footer>
+
+  <script src="cart.js"></script> <!-- Link to the cart logic -->
+</body>
+</html>
